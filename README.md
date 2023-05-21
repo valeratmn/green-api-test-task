@@ -9,5 +9,7 @@
 -скачать/клонировать проект:
 git clone https://github.com/valeratmn/green-api-test-task.git
 
+-установить зависимости командой в терминале "npm i" 
+
 -получить id и api-token.
 Инструкция здесь: https://green-api.com/docs/before-start/#account
