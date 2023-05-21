@@ -1,0 +1,24 @@
+.chatField {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+.inputField {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  padding: 0px;
+  margin-right: 15px;
+  border: none;
+}
+
+.inputField button {
+  height: 40px;
+  border: none;
+  background-color: #77d9c7;
+}
+
+.message {
+  list-style-type: none;
+}

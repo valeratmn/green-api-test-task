@@ -1,0 +1,37 @@
+
+
+.message {
+    display: grid;
+    margin: 10px 10px 0px 0px;
+    margin-top: 10px;
+    font-size: 20px;
+    margin: 15px;
+    
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+}
+
+.incoming {
+    justify-items: start;
+}
+
+.outgoing {
+    justify-items: flex-end;
+}
+
+.time {
+    display: inline-block;
+    font-size: 10px;
+}
+.name {
+    font-size: 14px;
+}
+
+.content {
+    width: max-content;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+  background-color: #77d9c7;
+
+}

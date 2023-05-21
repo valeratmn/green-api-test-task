@@ -1,0 +1,21 @@
+.chatItem {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px ;
+    border: 1px solid gray;
+}
+
+.userChat {
+    display: grid;
+}
+
+.sidebar {
+    display: grid;
+    justify-content: end;
+    align-items: center   
+}
+
+
+.userName {
+    font-size: 20px;
+}

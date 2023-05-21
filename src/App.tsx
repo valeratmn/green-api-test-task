@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Auth from "./components/Auth/Auth";
+import "./App.css";
+import ChatList from "./components/ChatList/ChatList";
+import Layout from "./components/Layout/Layout";
+import NewChat from "./components/NewChat/NewChat";
+import { useAppSelector } from "./store/hooks";
+import ChatField from "./components/ChatField/ChatField";
 
-function App() {
+const App: React.FC = () => {
+  const loggedIn = useAppSelector((state) => state.auth.status);
+  const selecedChat = useAppSelector((state) => state.chatId.chatId);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!loggedIn && (
+        <Layout>
+          <Auth />
+        </Layout>
+      )}
+      {loggedIn && (
+        <div className="chat">
+          <div className="contacts">
+            {loggedIn && <NewChat />}
+
+            <ChatList />
+          </div>
+          {selecedChat && (
+            <div className="chatfield">
+              <ChatField />
+            </div>
+          )}
+        </div>
+      )}
+    </>
   );
-}
+};
 
 export default App;
